@@ -19,9 +19,14 @@ qchat_admin_open
 - pom.xml
 
 ## 运行方式
-1. >git clone git@github.com:qunarcorp/qchat_admin_open.git
-2. >mvn package
-3. run on tomcat
+1. >执行doc/qchatAdminOpen.sql 初始化表结构
+2. >git clone git@github.com:qunarcorp/qchat_admin_open.git
+3. >修改数据库redis配置
+4. >mvn package
+5. >run on tomcat
+6. >把当前服务中的接收消息接口/msg/consumerMsg.qunar 添加到ejabberd 服务中接收咨询消息
+7. >初始化咨询数据 运行initChat.sql
+8. >部署前端项目，咨询客服没有接收到修改下客服服务模式，UPDATE  seat set service_status=4 where supplier_id=1;
 
 
 ## 接口说明
